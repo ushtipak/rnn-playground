@@ -5,7 +5,7 @@ curl -s https://raw.githubusercontent.com/ushtipak/rnn-bootstrap/master/setup-rn
 rm /opt/rnn-karpathy/data/tinyshakespeare/ -rf && echo done
 
 echo -n "> fetch occupations from wikipedia ... "
-amazon-linux-extras install python3
+amazon-linux-extras install python3 >/dev/null 2>&1
 curl -s https://raw.githubusercontent.com/ushtipak/rnn-playground/master/fetch-occupations.py | python3 > /opt/rnn-karpathy/data/input.txt && echo done
 
 echo -n "> train a model ... "
