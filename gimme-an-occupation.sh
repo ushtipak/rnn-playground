@@ -1,7 +1,7 @@
 #!/bin/bash
 
 echo -n "> bootstrap rnn ... "
-curl -s https://raw.githubusercontent.com/ushtipak/rnn-bootstrap/master/setup-rnn.sh | sudo bash 1>/dev/null
+curl -s https://raw.githubusercontent.com/ushtipak/rnn-bootstrap/master/setup-rnn.sh | bash >/dev/null 2>&1
 rm /opt/rnn-karpathy/data/tinyshakespeare/ -rf && echo done
 
 echo -n "> fetch occupations from wikipedia ... "
