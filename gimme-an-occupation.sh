@@ -9,5 +9,6 @@ amazon-linux-extras install python3 >/dev/null 2>&1
 curl -s https://raw.githubusercontent.com/ushtipak/rnn-playground/master/fetch-occupations.py | python3 > /opt/rnn-karpathy/data/input.txt && echo done
 
 echo -n "> train a model ... "
+cd /opt/rnn-karpathy/data/
 th train.lua -data_dir /opt/rnn-karpathy/data -rnn_size 64 -batch_size 20 -num_layers 2 -dropout 0.4 -gpuid -1 >/dev/null 2>&1 && echo done
 
